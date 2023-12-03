@@ -15,6 +15,7 @@ pub struct Blockchain {
 }
 
 impl Blockchain {
+    // Create a new blockchain instance.
     pub fn new(difficulty: usize) -> Self {
         // First block in the chain.
         let genesis_block = Block {
@@ -39,6 +40,7 @@ impl Blockchain {
         blockchain
     }
 
+    // Add a new block to the blockchain.
     pub fn add_block(&mut self) {
         let mut new_block = Block::new(
             self.chain.len() as u64,
